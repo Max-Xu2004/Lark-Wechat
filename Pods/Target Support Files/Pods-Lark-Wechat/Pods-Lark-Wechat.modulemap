@@ -1,0 +1,6 @@
+framework module Pods_Lark_Wechat {
+  umbrella header "Pods-Lark-Wechat-umbrella.h"
+
+  export *
+  module * { export * }
+}

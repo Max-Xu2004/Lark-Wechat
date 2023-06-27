@@ -7,6 +7,7 @@
 
 #import "LoginViewController.h"
 #import "Masonry.h"
+#import "AppDelegate.h"
 
 #define stautsBarHeight ([UIApplication sharedApplication].statusBarFrame.size.height) //定义状态栏高度常量
 
@@ -60,8 +61,7 @@
     if(self.confirm.selected == YES){
         if([self.textFieldaccount.text isEqual: @"redrock"]&&[self.textFieldpassword.text isEqual: @"123456"]){
             [self presentAlertControllerwithTitle:@"登录成功"];
-             
-            self.
+            [AppDelegate alreadyLogin];
         }
         else [self presentAlertControllerwithTitle:@"账号或密码错误"];
     }
@@ -150,6 +150,8 @@
         _textFieldaccount.font = [UIFont systemFontOfSize:18];
         _textFieldaccount.secureTextEntry = NO;
         _textFieldaccount.placeholder = @"请输入账号";
+        [_textFieldaccount setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [_textFieldaccount setAutocorrectionType:UITextAutocorrectionTypeNo];
         
         
     }
@@ -162,8 +164,8 @@
         _textFieldpassword.font = [UIFont systemFontOfSize:18];
         _textFieldpassword.secureTextEntry = YES;
         _textFieldpassword.placeholder = @"请输入密码";
-        
-        
+        [_textFieldpassword setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [_textFieldpassword setAutocorrectionType:UITextAutocorrectionTypeNo];
     }
     return _textFieldpassword;
 }

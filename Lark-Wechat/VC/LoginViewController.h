@@ -9,12 +9,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol LoginAndCreateMainView <NSObject>
-
--(void)alreadyLogin;
-
-@end
-
 @interface LoginViewController : UIViewController
 
 -(void)presentAlertControllerwithTitle:(NSString *)title;

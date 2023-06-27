@@ -13,6 +13,9 @@
 		752ADFAB2A41717E004260FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752ADFA92A41717E004260FC /* LaunchScreen.storyboard */; };
 		752ADFAE2A41717E004260FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFAD2A41717E004260FC /* main.m */; };
 		752ADFCD2A4172B3004260FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFCC2A4172B3004260FC /* LoginViewController.m */; };
+		752ADFDA2A49B157004260FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFD92A49B157004260FC /* MainViewController.m */; };
+		752ADFDD2A49B171004260FC /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDC2A49B171004260FC /* FriendViewController.m */; };
+		752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */; };
 		DB8FC43F667AE22CFB63E513 /* Pods_Lark_Wechat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913359DD7C19196941717389 /* Pods_Lark_Wechat.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,12 @@
 		752ADFAD2A41717E004260FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		752ADFCB2A4172B3004260FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		752ADFCC2A4172B3004260FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		752ADFD82A49B157004260FC /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		752ADFD92A49B157004260FC /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		752ADFDB2A49B171004260FC /* FriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		752ADFDC2A49B171004260FC /* FriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
+		752ADFDE2A49B6A8004260FC /* FriendCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCircleViewController.h; sourceTree = "<group>"; };
+		752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCircleViewController.m; sourceTree = "<group>"; };
 		913359DD7C19196941717389 /* Pods_Lark_Wechat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lark_Wechat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14704EF2ECD27CB18D338E0 /* Pods-Lark-Wechat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lark-Wechat.release.xcconfig"; path = "Target Support Files/Pods-Lark-Wechat/Pods-Lark-Wechat.release.xcconfig"; sourceTree = "<group>"; };
 		E826C5E847E4A1E6E01AE0F8 /* Pods-Lark-Wechat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lark-Wechat.debug.xcconfig"; path = "Target Support Files/Pods-Lark-Wechat/Pods-Lark-Wechat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +101,12 @@
 			children = (
 				752ADFCB2A4172B3004260FC /* LoginViewController.h */,
 				752ADFCC2A4172B3004260FC /* LoginViewController.m */,
+				752ADFD82A49B157004260FC /* MainViewController.h */,
+				752ADFD92A49B157004260FC /* MainViewController.m */,
+				752ADFDB2A49B171004260FC /* FriendViewController.h */,
+				752ADFDC2A49B171004260FC /* FriendViewController.m */,
+				752ADFDE2A49B6A8004260FC /* FriendCircleViewController.h */,
+				752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -219,8 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				752ADFCD2A4172B3004260FC /* LoginViewController.m in Sources */,
+				752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */,
 				752ADFA32A41717D004260FC /* ViewController.m in Sources */,
 				752ADF9D2A41717D004260FC /* AppDelegate.m in Sources */,
+				752ADFDA2A49B157004260FC /* MainViewController.m in Sources */,
+				752ADFDD2A49B171004260FC /* FriendViewController.m in Sources */,
 				752ADFAE2A41717E004260FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

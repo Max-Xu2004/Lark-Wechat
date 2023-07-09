@@ -31,20 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-//    UIScreenEdgePanGestureRecognizer *edgeGes = [[UIScreenEdgePanGestureRecognizer alloc]  initWithTarget: self  action:@selector(edgePan:)];
-//        edgeGes.edges = UIRectEdgeLeft;
-//    [self.view addGestureRecognizer:edgeGes];
     [self.view addSubview:self.back];
     [self.view addSubview:self.accountLabel];
     [self.view addSubview:self.passwordLabel];
-    [self.back addTarget:self action:@selector(buttonClick2:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.back mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).mas_offset(45);
-            make.left.equalTo(self.view).mas_offset(22);
-            make.width.mas_equalTo(30);
-            make.height.mas_equalTo(30);
-    }];
     // Do any additional setup after loading the view.
 }
 -(void)change{
@@ -152,7 +142,7 @@
         _textFieldaccount.placeholder = @"请输入账号";
         [_textFieldaccount setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [_textFieldaccount setAutocorrectionType:UITextAutocorrectionTypeNo];
-        
+//        _textFieldaccount.borderStyle = UITextBorderStyleRoundedRect;
         
     }
     return _textFieldaccount;
@@ -166,6 +156,7 @@
         _textFieldpassword.placeholder = @"请输入密码";
         [_textFieldpassword setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [_textFieldpassword setAutocorrectionType:UITextAutocorrectionTypeNo];
+//        _textFieldpassword.borderStyle = UITextBorderStyleRoundedRect;
     }
     return _textFieldpassword;
 }

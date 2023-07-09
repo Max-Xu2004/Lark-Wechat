@@ -6,6 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageTableViewCell.h"
+#import "MessageModel.h"
+#import "Masonry.h"
+
+#define STATUSBARHEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
 
 NS_ASSUME_NONNULL_BEGIN
 

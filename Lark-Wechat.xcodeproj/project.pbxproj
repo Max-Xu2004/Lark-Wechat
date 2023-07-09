@@ -16,12 +16,14 @@
 		752ADFDA2A49B157004260FC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFD92A49B157004260FC /* MainViewController.m */; };
 		752ADFDD2A49B171004260FC /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDC2A49B171004260FC /* FriendViewController.m */; };
 		752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */; };
+		757A45FF2A5AFEFB00F16C21 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A45FE2A5AFEFB00F16C21 /* SelfViewController.m */; };
 		75AFF83A2A568E1600BFF9F6 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AFF8392A568E1600BFF9F6 /* MessageTableViewCell.m */; };
 		75AFF83D2A584E0E00BFF9F6 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AFF83C2A584E0E00BFF9F6 /* MessageModel.m */; };
 		75DA83182A59717200938DBF /* Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA83172A59717200938DBF /* Avatar.m */; };
 		75DA831B2A598B9B00938DBF /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA831A2A598B9B00938DBF /* FriendModel.m */; };
 		75DA831F2A59A09C00938DBF /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA831E2A59A09C00938DBF /* SessionManager.m */; };
 		75DA83222A59BDDC00938DBF /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA83212A59BDDC00938DBF /* AddViewController.m */; };
+		75DA83342A5A89CA00938DBF /* FriendDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA83332A5A89CA00938DBF /* FriendDetailViewController.m */; };
 		DB8FC43F667AE22CFB63E513 /* Pods_Lark_Wechat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913359DD7C19196941717389 /* Pods_Lark_Wechat.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		752ADFDC2A49B171004260FC /* FriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
 		752ADFDE2A49B6A8004260FC /* FriendCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCircleViewController.h; sourceTree = "<group>"; };
 		752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCircleViewController.m; sourceTree = "<group>"; };
+		757A45FD2A5AFEFB00F16C21 /* SelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
+		757A45FE2A5AFEFB00F16C21 /* SelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
 		75AFF8382A568E1600BFF9F6 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		75AFF8392A568E1600BFF9F6 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		75AFF83B2A584E0E00BFF9F6 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		75DA831E2A59A09C00938DBF /* SessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		75DA83202A59BDDC00938DBF /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		75DA83212A59BDDC00938DBF /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		75DA83322A5A89CA00938DBF /* FriendDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDetailViewController.h; sourceTree = "<group>"; };
+		75DA83332A5A89CA00938DBF /* FriendDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendDetailViewController.m; sourceTree = "<group>"; };
 		913359DD7C19196941717389 /* Pods_Lark_Wechat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lark_Wechat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14704EF2ECD27CB18D338E0 /* Pods-Lark-Wechat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lark-Wechat.release.xcconfig"; path = "Target Support Files/Pods-Lark-Wechat/Pods-Lark-Wechat.release.xcconfig"; sourceTree = "<group>"; };
 		E826C5E847E4A1E6E01AE0F8 /* Pods-Lark-Wechat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lark-Wechat.debug.xcconfig"; path = "Target Support Files/Pods-Lark-Wechat/Pods-Lark-Wechat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,10 +132,14 @@
 				752ADFCC2A4172B3004260FC /* LoginViewController.m */,
 				752ADFD82A49B157004260FC /* MainViewController.h */,
 				752ADFD92A49B157004260FC /* MainViewController.m */,
+				757A45FD2A5AFEFB00F16C21 /* SelfViewController.h */,
+				757A45FE2A5AFEFB00F16C21 /* SelfViewController.m */,
 				752ADFDB2A49B171004260FC /* FriendViewController.h */,
 				752ADFDC2A49B171004260FC /* FriendViewController.m */,
 				75DA83202A59BDDC00938DBF /* AddViewController.h */,
 				75DA83212A59BDDC00938DBF /* AddViewController.m */,
+				75DA83322A5A89CA00938DBF /* FriendDetailViewController.h */,
+				75DA83332A5A89CA00938DBF /* FriendDetailViewController.m */,
 				752ADFDE2A49B6A8004260FC /* FriendCircleViewController.h */,
 				752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */,
 			);
@@ -294,12 +304,14 @@
 				752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */,
 				752ADFA32A41717D004260FC /* ViewController.m in Sources */,
 				75DA831F2A59A09C00938DBF /* SessionManager.m in Sources */,
+				75DA83342A5A89CA00938DBF /* FriendDetailViewController.m in Sources */,
 				752ADF9D2A41717D004260FC /* AppDelegate.m in Sources */,
 				752ADFDA2A49B157004260FC /* MainViewController.m in Sources */,
 				752ADFDD2A49B171004260FC /* FriendViewController.m in Sources */,
 				75DA83222A59BDDC00938DBF /* AddViewController.m in Sources */,
 				752ADFAE2A41717E004260FC /* main.m in Sources */,
 				75DA831B2A598B9B00938DBF /* FriendModel.m in Sources */,
+				757A45FF2A5AFEFB00F16C21 /* SelfViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

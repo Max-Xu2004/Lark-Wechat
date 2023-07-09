@@ -8,6 +8,8 @@ target 'Lark-Wechat' do
   pod 'Masonry'
   pod 'SDWebImage' 
   pod 'MJRefresh'
+  pod 'PinYin4Objc'
+  pod 'Pinyin'
 
   # Pods for Lark-Wechat
 

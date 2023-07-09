@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - MJRefresh (3.7.5)
+  - PinYin4Objc (1.1.1)
   - SDWebImage (5.15.0):
     - SDWebImage/Core (= 5.15.0)
   - SDWebImage/Core (5.15.0)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MJRefresh
+  - PinYin4Objc
   - SDWebImage
 
 SPEC REPOS:
@@ -31,14 +33,16 @@ SPEC REPOS:
     - AFNetworking
     - Masonry
     - MJRefresh
+    - PinYin4Objc
     - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   SDWebImage: 9bec4c5cdd9579e1f57104735ee0c37df274d593
 
-PODFILE CHECKSUM: 56db29c65f63fa988624809ab8c5814767ba430a
+PODFILE CHECKSUM: 42f0876d74806201922ee6e8269fd91159d16f91
 
 COCOAPODS: 1.11.3

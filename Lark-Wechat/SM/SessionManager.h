@@ -7,18 +7,14 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-#define APIPREFIX (@"https://be-dev.redrock.cqupt.edu.cn/magipoke-text/search/people?stu=")
-//static NSString *apiPrefix= @"https://news-at.zhihu.com/api/3/stories/before/";
+//#define APIPREFIX (@"https://be-dev.redrock.cqupt.edu.cn/magipoke-text/search/people?stu=")
+static NSString *apiPrefix= @"https://be-dev.redrock.cqupt.edu.cn/magipoke-text/search/people?stu=";
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SessionManager : AFHTTPSessionManager
 
 //异步请求数据
-+(void)getDatawithapiURL:(NSString *)api
-                   Success:(void(^)(NSArray *array))success
-                   Failure:(void(^)(void)) failure;
-
 +(void)getDataWithStuNum:(NSString *)stuNum
                    Success:(void(^)(NSArray *array))success
                    Failure:(void(^)(void)) failure;

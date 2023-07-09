@@ -51,31 +51,15 @@
     if(self.confirm.selected == YES){
         if([self.textFieldaccount.text isEqual: @"redrock"]&&[self.textFieldpassword.text isEqual: @"123456"]){
             [self presentAlertControllerwithTitle:@"登录成功"];
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            self.loginOrNot = YES;
+            [self setupUserDefault];
             [AppDelegate alreadyLogin];
         }
         else [self presentAlertControllerwithTitle:@"账号或密码错误"];
     }
     else [self presentAlertControllerwithTitle:@"请同意用户协议"];
     [self setupUserDefault];
-}
-#pragma mark - 退出登录按钮事件
-- (void)buttonClick3:(UIButton*)button{
-    [self presentAlertControllerwithTitle:@"退出登录成功"];
-    [self.avatar removeFromSuperview];
-    [self.logout removeFromSuperview];
-    [self.logout removeTarget:self action:@selector(buttonClick3:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.login];
-    [self.view addSubview:self.tip];
-    [self.view addSubview:self.button];
-    [self.view addSubview:self.textFieldaccount];
-    [self.view addSubview:self.textFieldpassword];
-    [self.view addSubview:self.confirm];
-    [self.confirm addTarget:self action:@selector(change) forControlEvents:UIControlEventTouchUpInside];
-    [self.button addTarget:self action:@selector(buttonClick1:) forControlEvents:UIControlEventTouchUpInside];
-    self.loginOrNot = NO;
-    NSLog(@"%d",self.loginOrNot);
-    [self setupUserDefault];
-    
 }
 
 

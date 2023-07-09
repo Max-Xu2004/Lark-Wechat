@@ -21,6 +21,9 @@
     self.title = @"添加好友";
     [self.view addSubview:self.addFriendTextField];
     [self.view addSubview:self.addButton];
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -56,12 +59,32 @@
     return _addButton;
 }
 
-#pragma mark - 添加好友按钮点击事件
+#pragma mark - 搜索好友按钮点击事件
 - (void)addButtonClick:(UIButton*)button{
-    NSLog(@"1");
-    [self presentAlertControllerwithTitle:self.addFriendTextField.text];
-//    if(self.addFriendTextField.text == nil) [self presentAlertControllerwithTitle:@"请输入学号"];
+    [SessionManager getDataWithStuNum:self.addFriendTextField.text Success:^(NSArray * _Nonnull array) {
+            if([array count]>0){
+                FriendModel *model =array[0];
+                FriendDetailViewController *detailVC = [[FriendDetailViewController alloc] init];
+                detailVC.detailModel = model;
+                [self.navigationController pushViewController:detailVC animated:YES];
+            }
+        } Failure:^{
+            NSLog(@"error");
+        }];
+
+//    [SessionManager getDataWithStuNum:self.addFriendTextField.text Success:^(NSArray * _Nonnull array) {
+//        if([array count]>0){
+//            FriendModel *model = array[0];
+//            FriendDetailViewController *detailVC = [[FriendDetailViewController alloc] init];
+//            detailVC.detailModel = model;
+//            [self.navigationController pushViewController:detailVC animated:YES];
+//        }
+//        else [self presentAlertControllerwithTitle:@"请输入正确学号！"];
+//        } Failure:^{
+//            NSLog(@"Error ");
+//        }];
 }
+    
 
 #pragma mark - 控件处理
 - (void)viewWillAppear:(BOOL)animated{

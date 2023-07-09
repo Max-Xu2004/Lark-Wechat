@@ -10,49 +10,39 @@
 
 @implementation SessionManager
 
-+(void)getDatawithapiURL:(NSString *)api
-                   Success:(void(^)(NSArray *array))success
-                   Failure:(void(^)(void)) failure{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:(api) parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSMutableArray *mArray = [NSMutableArray array];
-        NSDictionary *dict = responseObject[@"data"];
-        
-        if ((dict = NULL)) failure();//本行不确定是否可行
-        
-        FriendModel *model = [[FriendModel alloc] init];
-        [model friendModelWithDic:dict];
-        NSArray *rArray = [[NSArray alloc] initWithObjects:model, nil];
-//        [mArray addObject:model];
-        
-//        for(NSDictionary *dict in responseObject[@"stories"]){
-//            FriendModel *model = [[FriendModel alloc] init];
-//            [model friendModelWithDic:dict];
-//            [mArray addObject:model];
-//        }
-        if(success) success(rArray.copy);
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        }];
-}
+
 
 +(void)getDataWithStuNum:(NSString *)stuNum
                    Success:(void(^)(NSArray *array))success
                    Failure:(void(^)(void)) failure{
-    NSString *apiString = [APIPREFIX stringByAppendingString:stuNum];
+    NSString *stu = stuNum;
+    NSString *apiString = [apiPrefix stringByAppendingString:stu];
+//    NSLog(@"链接%@",apiString);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:(apiString) parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dict = responseObject[@"data"];
-        
-        if ((dict = NULL)) failure();//本行不确定是否可行
-        
-        FriendModel *model = [[FriendModel alloc] init];
-        [model friendModelWithDic:dict];
-        NSArray *rArray = [[NSArray alloc] initWithObjects:model, nil];
+//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+//
+//                //设置允许不受信任的证书
+//                securityPolicy.allowInvalidCertificates = YES;
+//                //设置不验证域名
+//                securityPolicy.validatesDomainName = NO;
+//
+//            manager.securityPolicy = securityPolicy;
 
-        if(success) success(rArray.copy);
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+    [manager GET:(apiString) parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray<NSDictionary *> *dataArray = responseObject[@"data"];
+        if([dataArray count]>0){
+            FriendModel *model = [FriendModel friendModelWithDict:dataArray[0]];
+            NSArray *rArray = [[NSArray alloc] initWithObjects:model, nil];
+            if(success) success(rArray.copy);
+        }
+        else{
+            if(success) success(dataArray.copy);
+        }
+
         
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"访问失败%@",error);
         }];
 }
 

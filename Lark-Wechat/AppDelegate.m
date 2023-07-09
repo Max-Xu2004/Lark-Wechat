@@ -25,9 +25,14 @@
     self.window = [[UIWindow alloc]init];
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
+    [self readUserDefaults];
+    NSLog(@"状态%d",self.loginOrNot);
     if(self.loginOrNot == NO){
         LoginViewController *lvc = [[LoginViewController alloc]init];
         [AppDelegate setRootViewViewController:lvc];
+    }
+    else {
+        [AppDelegate alreadyLogin];
     }
     return YES;
 }
@@ -81,6 +86,24 @@
     window.rootViewController = tabBarVC;
     
 }
+
+#pragma mark - 数据持久化
+- (void)setupUserDefault {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", defaults);
+    [defaults setBool:self.loginOrNot forKey:@"loginOrNot"];
+    [defaults synchronize];
+// 强制让数据立刻保存
+//    [defaults synchronize];
+
+} //写
+
+- (void)readUserDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.loginOrNot = [defaults boolForKey:@"loginOrNot"];
+
+//    NSLog(@"name=%@,gender=%@,age=%ld,height=%.1f",name,gender,age,height);
+} //读
 
 
 

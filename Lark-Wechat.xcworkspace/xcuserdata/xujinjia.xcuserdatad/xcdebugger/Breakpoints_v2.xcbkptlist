@@ -3,4 +3,274 @@
    uuid = "A7D5D0C2-C35E-4508-9A22-F3ECAF48AFB8"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03F283E0-79F0-4666-9C9A-401ADBC614BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/SM/SessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "+getDataWithStuNum:Success:Failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03F283E0-79F0-4666-9C9A-401ADBC614BF - 2f950b45b0b69d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "03F283E0-79F0-4666-9C9A-401ADBC614BF - 2f950b45b0b69d17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "03F283E0-79F0-4666-9C9A-401ADBC614BF - 2f950b45b0b6802f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDFBB6B1-69D8-445D-A925-9609ACD13874"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/VC/AddViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "AddViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F08DABA-E52A-4E21-BC31-B595BE1CCAC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/SM/SessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "+getDataWithStuNum:Success:Failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF52B8A3-B82E-4C9D-900B-A7273AF9D936"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/VC/FriendDetailViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "FriendDetailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6A975FB-C1F1-47F4-B590-A691E46BA36B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/SM/SessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "+getDataWithStuNum:Success:Failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D6A975FB-C1F1-47F4-B590-A691E46BA36B - 2f950b45b0b69f44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "D6A975FB-C1F1-47F4-B590-A691E46BA36B - f71eb1123324dd72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[SessionManager getDataWithStuNum:Success:Failure:]_block_invoke"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "D6A975FB-C1F1-47F4-B590-A691E46BA36B - f71eb1123324dd11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[SessionManager getDataWithStuNum:Success:Failure:]_block_invoke"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10A83647-564B-43B6-99E0-72EF8FE0DED2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/SM/SessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "+getDataWithStuNum:Success:Failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "10A83647-564B-43B6-99E0-72EF8FE0DED2 - 2f950b45b0b69fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "10A83647-564B-43B6-99E0-72EF8FE0DED2 - f71eb1123324ddf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52+[SessionManager getDataWithStuNum:Success:Failure:]_block_invoke"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "10A83647-564B-43B6-99E0-72EF8FE0DED2 - 2f950b45b0b69fe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "10A83647-564B-43B6-99E0-72EF8FE0DED2 - 2f950b45b0b69fe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SessionManager getDataWithStuNum:Success:Failure:]"
+                  moduleName = "Lark-Wechat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xujinjia/Documents/Xcode%20project/Lark-Wechat/Lark-Wechat/SM/SessionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38D25F6C-12D4-4704-9B60-DD2C2830B2D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lark-Wechat/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

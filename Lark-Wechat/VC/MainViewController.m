@@ -6,6 +6,7 @@
 //
 
 #import "MainViewController.h"
+#import "SelfViewController.h"
 
 @interface MainViewController ()<
 UITableViewDelegate,
@@ -25,8 +26,6 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    [self.view addSubview:self.avatar];
-    [self.navigationController.view addSubview:self.avatar];
     // Do any additional setup after loading the view.
 }
 
@@ -160,14 +159,25 @@ UITableViewDataSource
         [_avatar setImage:[UIImage imageNamed:@"avatar"] forState:UIControlStateNormal];
         _avatar.layer.cornerRadius = 20;
         _avatar.layer.masksToBounds = YES;
-//        [self.avatar mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(self.view).mas_offset(STATUSBARHEIGHT+5);
-//            make.left.equalTo(self.view).mas_offset(15);
-//            make.width.mas_equalTo(40);
-//            make.height.mas_equalTo(40);
-//        }];
+        [_avatar addTarget:self action:@selector(avatarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _avatar;
 }
+
+#pragma mark - 头像按钮事件
+- (void)avatarButtonClick:(UIButton*)button{
+    SelfViewController *selfView = [[SelfViewController alloc] init];
+    [self.navigationController pushViewController:selfView animated:YES];
+}
+
+#pragma mark - 控件调整
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.avatar removeFromSuperview];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.view addSubview:self.avatar];
+}
+
 
 @end

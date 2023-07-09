@@ -2,4 +2,5 @@ ${PODS_ROOT}/Target Support Files/Pods-Lark-Wechat/Pods-Lark-Wechat-frameworks.s
 ${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
 ${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/PinYin4Objc/PinYin4Objc.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

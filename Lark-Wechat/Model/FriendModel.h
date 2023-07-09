@@ -17,8 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *classnum;
 @property (nonatomic,copy) NSString *major;
 @property (nonatomic,copy) NSString *grade;
+@property (nonatomic,copy) NSString *pingyin;
 
--(instancetype)friendModelWithDic:(NSDictionary *)dic;
++(instancetype)friendModelWithDict:(NSDictionary *)dict;
 
 @end
 

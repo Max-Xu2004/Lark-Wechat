@@ -6,6 +6,7 @@
 //
 
 #import "MessageModel.h"
+#import "transformChineseToPinyin.h"
 
 @implementation MessageModel
 

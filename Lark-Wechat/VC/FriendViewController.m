@@ -7,6 +7,7 @@
 
 #import "FriendViewController.h"
 #import "AddViewController.h"
+#import "PinYin4Objc.h"
 
 @interface FriendViewController ()<
 UITableViewDelegate,
@@ -25,6 +26,7 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     // 初始化联系人列表和索引标题数组
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -131,6 +133,9 @@ UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
     return [self.indexTitles indexOfObject:title];
 }
+
+
+
 
 
 @end

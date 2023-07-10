@@ -134,6 +134,7 @@
     [self.mArray addObject:self.detailModel];
     [defaults setObject:self.mArray forKey:@"friends"];
     [defaults synchronize];
+    NSArray *array = self.mArray;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

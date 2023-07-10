@@ -6,6 +6,7 @@
 //
 
 #import "FriendModel.h"
+#import "transformChineseToPinyin.h"
 
 @implementation FriendModel
 
@@ -17,13 +18,9 @@
     model.classnum = dict[@"classnum"];
     model.major = dict[@"major"];
     model.grade = dict[@"grade"];
-//    model.pingyin = [PinyinHelper toHanyuPinyinStringWithNSString:model.name withHanyuPinyinOutputFormat:nil withNSString:@""];
-//    NSLog(@"拼音：%@",[PinyinHelper toHanyuPinyinStringWithNSString:model.name withHanyuPinyinOutputFormat:nil withNSString:@""]);
-    
+    model.pinyin = [transformChineseToPinyin transformChineseToPinyin:model.name];
     
     return model;
 }
-
-
 
 @end

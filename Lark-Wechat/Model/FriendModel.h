@@ -17,9 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *classnum;
 @property (nonatomic,copy) NSString *major;
 @property (nonatomic,copy) NSString *grade;
-@property (nonatomic,copy) NSString *pingyin;
+@property (nonatomic,copy) NSString *pinyin;
 
 +(instancetype)friendModelWithDict:(NSDictionary *)dict;
+- (NSString *)transformChineseToPinyin:(NSString *)chinese;
 
 @end
 

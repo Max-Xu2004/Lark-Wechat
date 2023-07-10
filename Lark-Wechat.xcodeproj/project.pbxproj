@@ -17,9 +17,9 @@
 		752ADFDD2A49B171004260FC /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDC2A49B171004260FC /* FriendViewController.m */; };
 		752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */; };
 		757A45FF2A5AFEFB00F16C21 /* SelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A45FE2A5AFEFB00F16C21 /* SelfViewController.m */; };
+		757A46022A5BB9A500F16C21 /* transformChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A46012A5BB9A500F16C21 /* transformChineseToPinyin.m */; };
 		75AFF83A2A568E1600BFF9F6 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AFF8392A568E1600BFF9F6 /* MessageTableViewCell.m */; };
 		75AFF83D2A584E0E00BFF9F6 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AFF83C2A584E0E00BFF9F6 /* MessageModel.m */; };
-		75DA83182A59717200938DBF /* Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA83172A59717200938DBF /* Avatar.m */; };
 		75DA831B2A598B9B00938DBF /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA831A2A598B9B00938DBF /* FriendModel.m */; };
 		75DA831F2A59A09C00938DBF /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA831E2A59A09C00938DBF /* SessionManager.m */; };
 		75DA83222A59BDDC00938DBF /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DA83212A59BDDC00938DBF /* AddViewController.m */; };
@@ -47,12 +47,12 @@
 		752ADFDF2A49B6A8004260FC /* FriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCircleViewController.m; sourceTree = "<group>"; };
 		757A45FD2A5AFEFB00F16C21 /* SelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfViewController.h; sourceTree = "<group>"; };
 		757A45FE2A5AFEFB00F16C21 /* SelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfViewController.m; sourceTree = "<group>"; };
+		757A46002A5BB9A500F16C21 /* transformChineseToPinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = transformChineseToPinyin.h; sourceTree = "<group>"; };
+		757A46012A5BB9A500F16C21 /* transformChineseToPinyin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = transformChineseToPinyin.m; sourceTree = "<group>"; };
 		75AFF8382A568E1600BFF9F6 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		75AFF8392A568E1600BFF9F6 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		75AFF83B2A584E0E00BFF9F6 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		75AFF83C2A584E0E00BFF9F6 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
-		75DA83162A59717200938DBF /* Avatar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Avatar.h; sourceTree = "<group>"; };
-		75DA83172A59717200938DBF /* Avatar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Avatar.m; sourceTree = "<group>"; };
 		75DA83192A598B9B00938DBF /* FriendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
 		75DA831A2A598B9B00938DBF /* FriendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
 		75DA831D2A59A09C00938DBF /* SessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 				752ADFA92A41717E004260FC /* LaunchScreen.storyboard */,
 				752ADFAC2A41717E004260FC /* Info.plist */,
 				752ADFAD2A41717E004260FC /* main.m */,
-				75DA83162A59717200938DBF /* Avatar.h */,
-				75DA83172A59717200938DBF /* Avatar.m */,
+				757A46002A5BB9A500F16C21 /* transformChineseToPinyin.h */,
+				757A46012A5BB9A500F16C21 /* transformChineseToPinyin.m */,
 				75DA831C2A59A05300938DBF /* SM */,
 				75AFF8362A53C79800BFF9F6 /* Model */,
 				75AFF8372A53C7A900BFF9F6 /* View */,
@@ -297,12 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75DA83182A59717200938DBF /* Avatar.m in Sources */,
 				752ADFCD2A4172B3004260FC /* LoginViewController.m in Sources */,
 				75AFF83A2A568E1600BFF9F6 /* MessageTableViewCell.m in Sources */,
 				75AFF83D2A584E0E00BFF9F6 /* MessageModel.m in Sources */,
 				752ADFE02A49B6A8004260FC /* FriendCircleViewController.m in Sources */,
 				752ADFA32A41717D004260FC /* ViewController.m in Sources */,
+				757A46022A5BB9A500F16C21 /* transformChineseToPinyin.m in Sources */,
 				75DA831F2A59A09C00938DBF /* SessionManager.m in Sources */,
 				75DA83342A5A89CA00938DBF /* FriendDetailViewController.m in Sources */,
 				752ADF9D2A41717D004260FC /* AppDelegate.m in Sources */,

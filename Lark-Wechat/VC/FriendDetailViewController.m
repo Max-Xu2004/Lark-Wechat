@@ -114,7 +114,7 @@
         [_addFriendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _addFriendBtn.layer.cornerRadius = 10;
         _addFriendBtn.layer.masksToBounds = YES;
-//        [_addFriendBtn addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_addFriendBtn addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _addFriendBtn;
@@ -134,6 +134,7 @@
     [self.mArray addObject:self.detailModel];
     [defaults setObject:self.mArray forKey:@"friends"];
     [defaults synchronize];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

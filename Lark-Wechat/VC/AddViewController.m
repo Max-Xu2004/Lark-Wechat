@@ -62,27 +62,16 @@
 #pragma mark - 搜索好友按钮点击事件
 - (void)addButtonClick:(UIButton*)button{
     [SessionManager getDataWithStuNum:self.addFriendTextField.text Success:^(NSArray * _Nonnull array) {
-            if([array count]>0){
-                FriendModel *model =array[0];
-                FriendDetailViewController *detailVC = [[FriendDetailViewController alloc] init];
-                detailVC.detailModel = model;
-                [self.navigationController pushViewController:detailVC animated:YES];
-            }
+        if([array count]>0){
+            FriendModel *model = array[0];
+            FriendDetailViewController *detailVC = [[FriendDetailViewController alloc] init];
+            detailVC.detailModel = model;
+            [self.navigationController pushViewController:detailVC animated:YES];
+        }
+        else [self presentAlertControllerwithTitle:@"请输入正确学号！"];
         } Failure:^{
-            NSLog(@"error");
+            NSLog(@"Error ");
         }];
-
-//    [SessionManager getDataWithStuNum:self.addFriendTextField.text Success:^(NSArray * _Nonnull array) {
-//        if([array count]>0){
-//            FriendModel *model = array[0];
-//            FriendDetailViewController *detailVC = [[FriendDetailViewController alloc] init];
-//            detailVC.detailModel = model;
-//            [self.navigationController pushViewController:detailVC animated:YES];
-//        }
-//        else [self presentAlertControllerwithTitle:@"请输入正确学号！"];
-//        } Failure:^{
-//            NSLog(@"Error ");
-//        }];
 }
     
 

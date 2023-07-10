@@ -40,9 +40,9 @@
             // 值不为空
             UIImage *storedImage = [UIImage imageWithData:storedImageData];
             [_avatar setImage:storedImage forState:UIControlStateNormal];
-            // 执行相应的操作
+            // 执行更换头像
         } else {
-            // 值为空
+            // 值为空，设置默认头像
             [_avatar setImage:[UIImage imageNamed:@"avatar"] forState:UIControlStateNormal];
         }
         
@@ -92,7 +92,6 @@
           //选择相机时，设置UIImagePickerController对象相关属性
           imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
           imagePicker.modalPresentationStyle = UIModalPresentationFullScreen;
-      //    imagePicker.mediaTypes = @[(NSString *)kUTTypeImage];
           imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
           //跳转到UIImagePickerController控制器弹出相机
           [self presentViewController:imagePicker animated:YES completion:nil];
@@ -103,6 +102,7 @@
 
           //选择相册时，设置UIImagePickerController对象相关属性
           imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            imagePicker.modalPresentationStyle = UIModalPresentationPageSheet;
           //跳转到UIImagePickerController控制器弹出相册
           [self presentViewController:imagePicker animated:YES completion:nil];
         }];

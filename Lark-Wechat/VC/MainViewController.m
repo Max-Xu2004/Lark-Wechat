@@ -156,7 +156,17 @@ UITableViewDataSource
 - (UIButton *)avatar{
     if(_avatar == nil){
         _avatar = [[UIButton alloc]initWithFrame:CGRectMake(15, STATUSBARHEIGHT, 40, 40)];
-        [_avatar setImage:[UIImage imageNamed:@"avatar"] forState:UIControlStateNormal];
+        NSData *storedImageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"AvatarImage"];
+
+        if (storedImageData != nil) {
+            // 值不为空
+            UIImage *storedImage = [UIImage imageWithData:storedImageData];
+            [_avatar setImage:storedImage forState:UIControlStateNormal];
+            // 执行相应的操作
+        } else {
+            // 值为空
+            [_avatar setImage:[UIImage imageNamed:@"avatar"] forState:UIControlStateNormal];
+        }
         _avatar.layer.cornerRadius = 20;
         _avatar.layer.masksToBounds = YES;
         [_avatar addTarget:self action:@selector(avatarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -177,6 +187,18 @@ UITableViewDataSource
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController.view addSubview:self.avatar];
+    self.tabBarController.tabBar.hidden = NO;
+    NSData *storedImageData = [[NSUserDefaults standardUserDefaults] objectForKey:@"AvatarImage"];
+
+    if (storedImageData != nil) {
+        // 值不为空
+        UIImage *storedImage = [UIImage imageWithData:storedImageData];
+        [self.avatar setImage:storedImage forState:UIControlStateNormal];
+        // 执行相应的操作
+    } else {
+        // 值为空
+        [self.avatar setImage:[UIImage imageNamed:@"avatar"] forState:UIControlStateNormal];
+    }
 }
 
 

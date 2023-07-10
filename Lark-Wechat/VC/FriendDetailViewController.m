@@ -128,12 +128,13 @@
 }
 
 #pragma mark -按钮事件
-//-(void)addButtonClick:(UIButton*)button{
-////    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-////    self.mArray = [defaults objectForKey:@"friends"];
-////    [self.mArray addObject:self.detailModel];
-////    [defaults setObject:self.mArray forKey:@"friends"];
-//}
+-(void)addButtonClick:(UIButton*)button{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.mArray = [defaults objectForKey:@"friends"];
+    [self.mArray addObject:self.detailModel];
+    [defaults setObject:self.mArray forKey:@"friends"];
+    [defaults synchronize];
+}
 
 
 

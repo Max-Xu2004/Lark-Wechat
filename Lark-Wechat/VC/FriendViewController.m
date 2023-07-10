@@ -16,7 +16,7 @@ UITableViewDataSource
 @property (nonatomic, strong) UITableView *tableView; // 联系人列表
 @property (nonatomic, strong) NSArray<NSString *> *indexTitles; // 索引标题（A-Z）
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSArray *> *contactsDictionary; // 按字母分组的联系人字典
-@property (nonatomic,strong) NSMutableArray *contactsArray;
+@property (nonatomic,strong) NSMutableArray<NSDictionary *> *contactsArray;
 
 
 @end
@@ -39,7 +39,7 @@ UITableViewDataSource
 }
 
 - (void)fetchContacts {
-    // 获取联系人数据，具体方法根据您的实际需求实现
+    // 获取联系人数据，具体方法根据实际需求实现
     NSArray *contactsArray = [self getContactsData];
     
     // 初始化联系人字典

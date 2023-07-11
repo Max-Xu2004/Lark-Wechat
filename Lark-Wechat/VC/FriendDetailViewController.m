@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UILabel *gradeLabel;//年级
 @property (nonatomic, strong) UIButton *addFriendBtn;//添加朋友按钮
 @property (nonatomic, strong) NSMutableArray *mArray;
+@property (nonatomic, strong) NSMutableArray *cachedFriends;
 
 @end
 
@@ -109,12 +110,35 @@
     if (_addFriendBtn == nil) {
         _addFriendBtn = [[UIButton alloc] init];
         _addFriendBtn.frame = CGRectMake((self.view.frame.size.width-315)/2, STATUSBARHEIGHT+350, 315, 52);
-        [_addFriendBtn setTitle:@"添加好友" forState:UIControlStateNormal];
-        _addFriendBtn.backgroundColor = [UIColor blueColor];
-        [_addFriendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        
+        
         _addFriendBtn.layer.cornerRadius = 10;
         _addFriendBtn.layer.masksToBounds = YES;
-        [_addFriendBtn addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        self.cachedFriends = [[[NSUserDefaults standardUserDefaults] objectForKey:@"Friends"] mutableCopy];
+        if (self.cachedFriends == nil) {
+            self.cachedFriends = [NSMutableArray array];
+        }
+        BOOL isFriendExist = NO;
+        for (FriendModel *friend in self.cachedFriends) {
+            if ([friend.stunum isEqualToString:self.detailModel.stunum]) { // 使用学号进行比较
+                isFriendExist = YES;
+                break;
+            }
+        }
+        if (!isFriendExist) {
+            [_addFriendBtn setTitle:@"添加好友" forState:UIControlStateNormal];
+            _addFriendBtn.backgroundColor = [UIColor blueColor];
+            [_addFriendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [_addFriendBtn addTarget:self action:@selector(addButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        else {
+            [_addFriendBtn setTitle:@"好友已添加" forState:UIControlStateNormal];
+            _addFriendBtn.backgroundColor = [UIColor grayColor];
+            [_addFriendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            
+        }
         
     }
     return _addFriendBtn;
@@ -129,12 +153,21 @@
 
 #pragma mark -按钮事件
 -(void)addButtonClick:(UIButton*)button{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.mArray = [defaults objectForKey:@"friends"];
-    [self.mArray addObject:self.detailModel];
-    [defaults setObject:self.mArray forKey:@"friends"];
-    [defaults synchronize];
-    NSArray *array = self.mArray;
+    [self.cachedFriends addObject:self.detailModel];
+    [[NSUserDefaults standardUserDefaults] setObject:self.cachedFriends forKey:@"Friends"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+//    NSMutableArray *cachedFriends = [[[NSUserDefaults standardUserDefaults] objectForKey:@"Friends"] mutableCopy];
+//    if (cachedFriends == nil) {
+//        cachedFriends = [NSMutableArray array];
+//    }
+//    BOOL isFriendExist = NO;
+//    for (FriendModel *friend in cachedFriends) {
+//        if ([friend.stunum isEqualToString:self.detailModel.stunum]) { // 使用学号进行比较
+//            isFriendExist = YES;
+//            break;
+//        }
+//    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

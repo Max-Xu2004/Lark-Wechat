@@ -31,9 +31,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:self.back];
+    [self readUserDefaults];
     [self.view addSubview:self.accountLabel];
     [self.view addSubview:self.passwordLabel];
+    [self.view addSubview:self.login];
+    [self.view addSubview:self.tip];
+    [self.view addSubview:self.button];
+    [self.view addSubview:self.textFieldaccount];
+    [self.view addSubview:self.textFieldpassword];
+    [self.view addSubview:self.confirm];
+    [self.confirm addTarget:self action:@selector(change) forControlEvents:UIControlEventTouchUpInside];
+    [self.button addTarget:self action:@selector(buttonClick1:) forControlEvents:UIControlEventTouchUpInside];
     
     // Do any additional setup after loading the view.
 }
@@ -163,35 +171,7 @@
     return _passwordLabel;
 }
 
-- (UIButton *)back{
-    if(_back == nil){
-        _back = [[UIButton alloc]init];
-        [_back setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    }
-    return _back;
-}
 
-- (UIButton *)logout {
-    if (_logout == nil) {
-        _logout = [[UIButton alloc] init];
-        _logout.frame = CGRectMake((self.view.frame.size.width-315)/2, 520, 315, 52);
-        [_logout setTitle:@"退出登录" forState:UIControlStateNormal];
-        _logout.backgroundColor = [UIColor blueColor];
-        [_logout setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _logout.layer.cornerRadius = 10;
-        _logout.layer.masksToBounds = YES;
-        
-    }
-    return _logout;
-}
-
-- (UIImageView *)avatar{
-    if(_avatar == nil){
-        _avatar = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-100)/2, 100, 100, 100)];
-        _avatar.image = [UIImage imageNamed:@"touxiang"];
-    }
-    return  _avatar;
-}
 #pragma mark - 弹出提示框
 -(void)presentAlertControllerwithTitle:(NSString *)title{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:NULL preferredStyle:UIAlertControllerStyleAlert];
@@ -230,24 +210,6 @@
 //    NSLog(@"name=%@,gender=%@,age=%ld,height=%.1f",name,gender,age,height);
 } //读
 
-- (void)viewDidAppear:(BOOL)animated{
-    [self readUserDefaults];
-    NSLog(@"%d",self.loginOrNot);
-    if(self.loginOrNot == NO){
-        [self.view addSubview:self.login];
-        [self.view addSubview:self.tip];
-        [self.view addSubview:self.button];
-        [self.view addSubview:self.textFieldaccount];
-        [self.view addSubview:self.textFieldpassword];
-        [self.view addSubview:self.confirm];
-        [self.confirm addTarget:self action:@selector(change) forControlEvents:UIControlEventTouchUpInside];
-        [self.button addTarget:self action:@selector(buttonClick1:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    if(self.loginOrNot == YES){
-        [self.view addSubview:self.logout];
-        [self.view addSubview:self.avatar];
-        [self.logout addTarget:self action:@selector(buttonClick3:) forControlEvents:UIControlEventTouchUpInside];
-    }
-}
+
 
 @end

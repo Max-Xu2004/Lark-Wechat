@@ -19,13 +19,19 @@
 
 @implementation SelfViewController
 
++(void)load{
+    
+}
+
++ (void)initialize{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.avatar];
     [self.view addSubview:self.logout];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.loginOrNot = [defaults objectForKey:@"loginOrNot"];
     // Do any additional setup after loading the view.
 }
 
@@ -70,10 +76,10 @@
 
 #pragma mark - 按钮事件
 - (void)buttonClick3:(UIButton*)button{
-    [self presentAlertControllerwithTitle:@"退出登录成功"];
     self.loginOrNot = NO;
     NSLog(@"状态%d",self.loginOrNot);
     [self setupUserDefault];
+    [self presentAlertControllerwithTitle:@"退出登录成功"];
     LoginViewController *lvc = [[LoginViewController alloc]init];
     [AppDelegate setRootViewViewController:lvc];
 }//登陆按钮
@@ -154,7 +160,6 @@
 #pragma mark - 数据持久化
 - (void)setupUserDefault {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"%@", defaults);
     [defaults setBool:self.loginOrNot forKey:@"loginOrNot"];
     [defaults synchronize];
 // 强制让数据立刻保存
